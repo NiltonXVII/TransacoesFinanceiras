@@ -1,0 +1,234 @@
+/* Definição das fontes Montserrat */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Variáveis de Cores e Estilos Base */
+:root {
+    --cor_primaria_amarelo: #FFEC00;
+    --cor_secundaria_azul: #0033A0;
+    --cor_texto_escuro: #333;
+    --cor_fundo_claro: #f8f9fa;
+    --cor_azul_hover: #00226a;
+    --cor_receita: #198754;
+    --cor_despesa: #dc3545;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor_fundo_claro);
+}
+
+/* Cabeçalho */
+.fundo_amarelo {
+    background-color: var(--cor_primaria_amarelo);
+}
+
+.fundo_azul {
+    background-color: var(--cor_secundaria_azul);
+}
+
+.texto_azul {
+    color: var(--cor_secundaria_azul) !important;
+    font-weight: 500;
+}
+
+.texto_amarelo {
+    color: var(--cor_primaria_amarelo) !important;
+}
+
+.botao_amarelo {
+    background-color: var(--cor_primaria_amarelo);
+    color: var(--cor_secundaria_azul);
+    border: none;
+    font-weight: bold;
+}
+
+.botao_amarelo:hover {
+    background-color: #e6d500;
+    color: var(--cor_secundaria_azul);
+}
+
+.link_animado:hover {
+    opacity: 0.8;
+}
+
+.dropdown-menu.fundo_azul {
+    background-color: var(--cor_secundaria_azul);
+}
+
+.dropdown-item.texto_amarelo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 236, 0, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 236, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Corpo Principal */
+.secao_principal {
+    min-height: calc(100vh - 250px);
+}
+
+.cartao_gerenciador {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.cabecalho_cartao {
+    background: var(--cor_secundaria_azul);
+    color: var(--cor_primaria_amarelo);
+}
+
+.titulo_formulario {
+    color: var(--cor_secundaria_azul);
+    font-weight: bold;
+}
+
+.card_saldo {
+    border-left: 5px solid var(--cor_secundaria_azul);
+}
+
+.card_receita {
+    border-left: 5px solid var(--cor_receita);
+}
+
+.card_despesa {
+    border-left: 5px solid var(--cor_despesa);
+}
+
+.form-control:focus, .form-select:focus, .form-check-input:focus {
+    border-color: var(--cor_secundaria_azul);
+    box-shadow: 0 0 0 0.25rem rgba(0, 51, 160, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--cor_secundaria_azul);
+    border-color: var(--cor_secundaria_azul);
+}
+
+.btn_principal {
+    background-color: var(--cor_secundaria_azul);
+    border-color: var(--cor_secundaria_azul);
+}
+
+.btn_principal:hover {
+    background-color: var(--cor_azul_hover);
+    border-color: var(--cor_azul_hover);
+}
+
+.valor-receita {
+    color: var(--cor_receita);
+    font-weight: bold;
+}
+
+.valor-despesa {
+    color: var(--cor_despesa);
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape_principal {
+    background-color: var(--cor_secundaria_azul);
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.rodape_principal h5 {
+    color: var(--cor_primaria_amarelo);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.lista_rodape {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista_rodape li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.lista_rodape li a:hover {
+    text-decoration: underline;
+}
+
+.icones_rodape a {
+    font-size: 1.8rem;
+    color: var(--cor_primaria_amarelo);
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.icones_rodape a:hover {
+    color: #fff;
+}
+
+.assinatura_rodape {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* ESTILOS PARA AMBOS OS MODAIS (ADICIONADOS) */
+.cabecalho_modal, .cabecalho_modal_login {
+    background-color: var(--cor_secundaria_azul);
+    color: var(--cor_primaria_amarelo);
+    border-bottom: 3px solid var(--cor_primaria_amarelo);
+}
+
+.conteudo_modal_cadastro, .conteudo_modal_login {
+    border: 1px solid var(--cor_secundaria_azul);
+    border-radius: 0.5rem;
+}
+
+.cabecalho_modal .btn-close, .cabecalho_modal_login .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.corpo_modal .input-group-text, .corpo_modal_login .input-group-text {
+    background-color: var(--cor_secundaria_azul);
+    color: var(--cor_primaria_amarelo);
+    border-color: var(--cor_secundaria_azul);
+}
+
+.rodape_modal .botao_principal_modal, .rodape_modal_login .botao_principal_modal_login {
+    background-color: var(--cor_secundaria_azul);
+    border-color: var(--cor_secundaria_azul);
+    color: var(--cor_primaria_amarelo);
+    font-weight: bold;
+}
+
+.rodape_modal .botao_principal_modal:hover, .rodape_modal_login .botao_principal_modal_login:hover {
+    background-color: #001f33; /* Azul um pouco mais escuro */
+    border-color: #001f33;
+    color: #FFFFFF;
+}
